@@ -1,0 +1,22 @@
+npm init -y
+npm i express mongoose
+create .env,main.js,models,routes
+npm install dotenv
+npm install cors
+
+http://localhost:3000/abi/recipes
+
+
+db.recipes.updateOne(
+  { slug: "paneer-butter-masala" }, // Find the recipe by slug (or use rid)
+  { $set: { imageURL: "https://example.com/images/paneer-butter-masala.jpg" } } // Add image URL
+);
+
+
+Client ID: 887c03b50ff248a6b695420442bc1c78 
+Client Secret: 4d1b7892bf024d11983b8d15a3cddd66
+
+
+git init
+git add .
+git commit -am "inital commit"
