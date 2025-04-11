@@ -1,4 +1,4 @@
-router.get('/api/recipes', async (req, res) => {
+router.get('/recipes', async (req, res) => {
     try {
       const { subcategory } = req.query;
       let filter = {};
