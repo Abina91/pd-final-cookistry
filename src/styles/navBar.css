@@ -1,0 +1,65 @@
+.navbar {
+    background-color: #e0c6fa; /* Tailwind bg-red-600 */
+  }
+  
+  .navbar-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #000;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600;     /* font-semibold */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-item {
+    position: relative;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    color: #000;
+    background-color: #ffffff;
+  }
+  
+  .menu-title {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .menu-item{
+    font-size: 1.2em;
+  }
+  .dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #ffffff;
+    color: #1f2937; /* text-gray-800 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 12rem; /* w-48 */
+    display: none;
+    z-index: 10;
+  }
+  
+  .menu-item:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #e0c6fa; /* hover:bg-red-100 */
+    color: #000;            /* hover:text-red-700 */
+  }
+  

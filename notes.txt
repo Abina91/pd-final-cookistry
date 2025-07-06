@@ -1,0 +1,66 @@
+cd folder_name
+inside your project folder->frontend : npx create-react-app ./
+install:
+npm install
+npm react-router-dom
+ I got an error for running a react app: npm install --save-dev ajv@^7 
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+primary color : #cc99ff
+
+
+
+import React from "react";
+import { Link } from "react-router-dom";
+import Layout from "../components/Layout";
+import "../styles/home.css";
+
+const Home = () => {
+  // ✅ Move recipes here
+  const recipes = [
+    { id: 1, name: 'Thai Glass Noodle Salad', image: 'assets/home/thai.jpg' },
+    { id: 2, name: 'Chow Chow Pepper Kootu', image: 'assets/home/chow.jpg' },
+    { id: 3, name: 'Moong Dal', image: 'assets/home/moong.jpg' },
+    { id: 4, name: 'Chicken Curry in Coconut Milk', image: 'assets/home/curry.jpg' },
+    { id: 5, name: 'Eral Kuzhambu', image: 'assets/home/eral.jpg' },
+    { id: 6, name: 'Milk Barfi', image: 'assets/home/barfi.jpg' },
+    { id: 7, name: 'Ennai Kathirikkai Fry', image: 'assets/home/kathirikai.jpg' },
+    { id: 8, name: 'Mixed Vegetable Cutlet', image: 'assets/home/cutlet.jpg' },
+    // Add more recipes if needed
+  ];
+
+  return (
+    <Layout>
+      <div className="home-page">
+        <h1>Simplify Indian cooking with Cookistry!</h1>
+        <p>
+          Say goodbye to overly complex recipes and lengthy ingredient lists. Discover authentic Indian dishes made easy with detailed, step-by-step instructions.
+          <br /><br />
+          From regional specialties across India to global cuisines like Thai, Chinese, and Vietnamese, there's something for everyone to explore and enjoy.
+          <br />
+          Whether you're a fan of traditional flavors or eager to try something new, cooking has never been this simple.
+          <br />
+        </p>
+
+        {/* ✅ Render Recipes */}
+        <div className="latest-recipes">
+            <h2>Latest Recipes</h2>
+            <div className="recipes-grid">
+          {recipes.map((recipe) => (
+            <div className="recipe-card" key={recipe.id}>
+              <Link to={`/recipe/${recipe.id}`}>
+                <img src={recipe.image} alt={recipe.name} />
+                <p>{recipe.name}</p>
+              </Link>
+            </div>
+          ))}
+        </div>
+        </div>
+        
+        
+      </div>
+    </Layout>
+  );
+};
+
+export default Home;
